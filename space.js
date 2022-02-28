@@ -26,8 +26,9 @@ class Example extends Phaser.Scene
 
         this.cursors = this.input.keyboard.createCursorKeys();
 
-        this.player = this.physics.add.image(400, 300, 'mira');
         this.nave = this.physics.add.image(200, 100, 'ship');
+        this.player = this.physics.add.image(400, 300, 'mira');
+
 
         this.player.setCollideWorldBounds(true);
         this.nave.setCollideWorldBounds(true);
