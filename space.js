@@ -27,7 +27,7 @@ class Example extends Phaser.Scene
         this.cursors = this.input.keyboard.createCursorKeys();
 
         this.player = this.physics.add.image(400, 300, 'mira');
-        this.nave = this.physics.add.image(200, 100, 'nave');
+        this.nave = this.physics.add.image(200, 100, 'ship');
 
         this.player.setCollideWorldBounds(true);
 
@@ -37,9 +37,15 @@ class Example extends Phaser.Scene
     update ()
     {
         this.player.setVelocity(0);
-        let velocidade = Math.floor(Math.random() * 1000) -500;
-        this.nave.setVelocityY(velocidade);
 
+        let velocidade = Math.floor(Math.random() * 1000) -500;
+        let v = Math.random() * 100; 
+        if (v <5 ) {
+             this.nave.setVelocityY(velocidade);
+        } else if (v > 95) {
+             this.nave.setVelocityX(velocidade);
+        }
+            
         if (this.cursors.left.isDown)
         {
             this.player.setVelocityX(-500);
