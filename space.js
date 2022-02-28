@@ -7,21 +7,21 @@ class Example extends Phaser.Scene
 
     preload ()
     {
-        this.load.image('bg', 'assets/the-end-by-iloe-and-made.jpg');
-        this.load.image('block', 'assets/block.png');
+        this.load.image('bg', 'assets/stars.jpeg');
+        this.load.image('block', 'assets/ship.png');
     }
 
     create ()
     {
         //  Set the camera and physics bounds to be the size of 4x4 bg images
-        this.cameras.main.setBounds(0, 0, 1920 * 2, 1080 * 2);
-        this.physics.world.setBounds(0, 0, 1920 * 2, 1080 * 2);
+        this.cameras.main.setBounds(0, 0, 1500 * 2, 1000 * 2);
+        this.physics.world.setBounds(0, 0, 1500 * 2, 1000 * 2);
 
         //  Mash 4 images together to create our background
         this.add.image(0, 0, 'bg').setOrigin(0);
-        this.add.image(1920, 0, 'bg').setOrigin(0).setFlipX(true);
-        this.add.image(0, 1080, 'bg').setOrigin(0).setFlipY(true);
-        this.add.image(1920, 1080, 'bg').setOrigin(0).setFlipX(true).setFlipY(true);
+        this.add.image(1500, 0, 'bg').setOrigin(0).setFlipX(true);
+        this.add.image(0, 1000, 'bg').setOrigin(0).setFlipY(true);
+        this.add.image(1500, 1000, 'bg').setOrigin(0).setFlipX(true).setFlipY(true);
 
         this.cursors = this.input.keyboard.createCursorKeys();
 
