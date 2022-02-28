@@ -8,7 +8,7 @@ class Example extends Phaser.Scene
     preload ()
     {
         this.load.image('bg', 'assets/stars.jpeg');
-        this.load.image('ship', 'assets/ship.png');
+        this.load.image('ship', 'assets/nave.png');
     }
 
     create ()
@@ -25,7 +25,7 @@ class Example extends Phaser.Scene
 
         this.cursors = this.input.keyboard.createCursorKeys();
 
-        this.player = this.physics.add.image(400, 300, 'ship').scale(0.5);
+        this.player = this.physics.add.image(400, 300, 'ship');
 
         this.player.setCollideWorldBounds(true);
 
