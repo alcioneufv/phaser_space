@@ -30,6 +30,7 @@ class Example extends Phaser.Scene
         this.nave = this.physics.add.image(200, 100, 'ship');
 
         this.player.setCollideWorldBounds(true);
+        this.nave.setCollideWorldBounds(true);
 
         this.cameras.main.startFollow(this.player, true, 0.05, 0.05);
     }
