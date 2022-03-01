@@ -21,9 +21,9 @@ class Example extends Phaser.Scene
 
         //  Mash 4 images together to create our background
         this.add.image(0, 0, 'bg').setOrigin(0);
- //       this.add.image(1500, 0, 'bg').setOrigin(0).setFlipX(true);
-//        this.add.image(0, 1000, 'bg').setOrigin(0).setFlipY(true);
- //       this.add.image(1500, 1000, 'bg').setOrigin(0).setFlipX(true).setFlipY(true);
+        this.add.image(1500, 0, 'bg').setOrigin(0).setFlipX(true);
+        this.add.image(0, 1000, 'bg').setOrigin(0).setFlipY(true);
+        this.add.image(1500, 1000, 'bg').setOrigin(0).setFlipX(true).setFlipY(true);
 
         this.cursors = this.input.keyboard.createCursorKeys();
 
