@@ -10,6 +10,7 @@ class Example extends Phaser.Scene
         this.load.image('bg', 'assets/stars.jpeg');
         this.load.image('ship', 'assets/nave.png');
         this.load.image('mira', 'assets/mira.png');
+        this.load.image('arma', 'assets/arma.png');
         this.load.atlas('flares', 'assets/flares.png', 'assets/flares.json');
     }
 
@@ -29,6 +30,7 @@ class Example extends Phaser.Scene
 
         this.nave = this.physics.add.image(200, 100, 'ship');
         this.player = this.physics.add.image(400, 300, 'mira');
+        this.arma = this.physics.add.image(400, 700, 'arma');
 
 
         this.player.setCollideWorldBounds(true);
@@ -66,7 +68,8 @@ class Example extends Phaser.Scene
             this.particles.emitParticleAt(this.player.x, this.player.y+400);
         }
     
-            
+        this.arma.setXY(this.player.x,this.player.y);
+        
         if (this.cursors.left.isDown)
         {
             this.player.setVelocityX(-500);
