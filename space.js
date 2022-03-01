@@ -48,7 +48,6 @@ class Example extends Phaser.Scene
             speedY: { start: -400, end: -600, steps: 12 },
             scale: { start: 0.7, end:  0.7 },
             blendMode: 'ADD',
-            particleClass: AnimatedParticle,
             on: false
         });
 
