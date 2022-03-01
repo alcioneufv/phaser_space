@@ -68,7 +68,8 @@ class Example extends Phaser.Scene
             this.particles.emitParticleAt(this.player.x, this.player.y+400);
         }
     
-        this.arma.setXY(this.player.x,this.player.y);
+        this.arma.x= this.player.x;
+        this.arma.y= this.player.y;
         
         if (this.cursors.left.isDown)
         {
