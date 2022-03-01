@@ -13,7 +13,6 @@ class Example extends Phaser.Scene
         this.load.image('arma', 'assets/arma.png');
         this.load.spritesheet('plasma', 'assets/plasmaball.png', { frameWidth: 128, frameHeight: 128 });
 
-        this.load.atlas('flares', 'assets/flares.png', 'assets/flares.json');
     }
 
     create ()
@@ -46,7 +45,7 @@ class Example extends Phaser.Scene
             lifespan: 1000,
             speedX: { min: -20, max: 20 },
             speedY: { start: -400, end: -600, steps: 12 },
-            scale: { start: 0.7, end:  0.7 },
+            scale: { start: 0.3, end:  0.3 },
             blendMode: 'ADD',
             on: false
         });
@@ -68,7 +67,7 @@ class Example extends Phaser.Scene
         
         if (this.cursors.space.isDown)
         {
-            this.particles.emitParticleAt(this.player.x, this.player.y+400);
+            this.particles.emitParticleAt(this.player.x, this.player.y+300);
         }
     
         this.arma.x= this.player.x;
