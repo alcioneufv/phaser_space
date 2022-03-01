@@ -61,6 +61,12 @@ class Example extends Phaser.Scene
         } else if (v > 95) {
              this.nave.setVelocityX(velocidade);
         }
+        
+        if (this.cursors.space.isDown)
+        {
+            this.particles.emitParticleAt(200, 400);
+        }
+    
             
         if (this.cursors.left.isDown)
         {
