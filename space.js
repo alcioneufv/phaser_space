@@ -33,7 +33,6 @@ class Example extends Phaser.Scene
         this.player = this.physics.add.image(400, 300, 'mira');
         this.arma = this.physics.add.image(400, 700, 'arma');
 
-
         this.player.setCollideWorldBounds(true);
         this.nave.setCollideWorldBounds(true);
         this.arma.setCollideWorldBounds(true);
@@ -67,7 +66,7 @@ class Example extends Phaser.Scene
         
         if (this.cursors.space.isDown)
         {
-            this.particles.emitParticleAt(this.player.x, this.player.y+300);
+            this.particles.emitParticleAt(this.player.x, this.player.y+350);
         }
     
         this.arma.x= this.player.x;
