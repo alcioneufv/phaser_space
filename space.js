@@ -11,6 +11,8 @@ class Example extends Phaser.Scene
         this.load.image('ship', 'assets/nave.png');
         this.load.image('mira', 'assets/mira.png');
         this.load.image('arma', 'assets/arma.png');
+        this.load.spritesheet('plasma', 'assets/plasmaball.png', { frameWidth: 128, frameHeight: 128 });
+
         this.load.atlas('flares', 'assets/flares.png', 'assets/flares.json');
     }
 
