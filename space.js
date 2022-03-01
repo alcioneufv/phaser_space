@@ -37,9 +37,7 @@ class Example extends Phaser.Scene
         this.particles = this.add.particles('flares');
 
         this.particles.createEmitter({
-            frame: 'green',
-            x: 400,
-            y: 300,
+            frame: 'blue',
             lifespan: 1000,
             speedX: { min: -20, max: 20 },
             speedY: { start: -400, end: -600, steps: 12 },
@@ -65,7 +63,7 @@ class Example extends Phaser.Scene
         
         if (this.cursors.space.isDown)
         {
-            this.particles.emitParticleAt(this.player.x, this.player.y);
+            this.particles.emitParticleAt(this.player.x, this.player.y+100);
         }
     
             
