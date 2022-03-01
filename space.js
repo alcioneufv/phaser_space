@@ -69,7 +69,7 @@ class Example extends Phaser.Scene
         }
     
         this.arma.x= this.player.x;
-        this.arma.y= this.player.y;
+        this.arma.y= this.player.y+400;
         
         if (this.cursors.left.isDown)
         {
