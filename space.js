@@ -40,9 +40,9 @@ class Example extends Phaser.Scene
             frame: 'green',
             x: 400,
             y: 300,
-            lifespan: 5000,
+            lifespan: 1000,
             speedX: { min: -20, max: 20 },
-            speedY: { start: 400, end: 600, steps: 12 },
+            speedY: { start: -400, end: -600, steps: 12 },
             scale: { start: 0.7, end:  0.2 },
             blendMode: 'ADD',
             on: false
