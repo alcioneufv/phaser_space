@@ -10,6 +10,7 @@ class Example extends Phaser.Scene
         this.load.image('bg', 'assets/stars.jpeg');
         this.load.image('ship', 'assets/nave.png');
         this.load.image('mira', 'assets/mira.png');
+        this.load.atlas('flares', 'assets/flares.png', 'assets/flares.json');
     }
 
     create ()
@@ -32,6 +33,19 @@ class Example extends Phaser.Scene
 
         this.player.setCollideWorldBounds(true);
         this.nave.setCollideWorldBounds(true);
+        
+        this.particles = this.add.particles('flares');
+
+        this.particles.createEmitter({
+            frame: 'green',
+            x: 100,
+            y: 300,
+            lifespan: 2000,
+            speedX: { start: 100, end: 400, steps: 12 },
+            speedY: { min: -20, max: 20 },
+            scale: { start: 0.7, end:  0.2 },
+            blendMode: 'ADD'
+        });
 
         this.cameras.main.startFollow(this.player, true, 0.05, 0.05);
     }
