@@ -35,6 +35,7 @@ class Example extends Phaser.Scene
 
         this.player.setCollideWorldBounds(true);
         this.nave.setCollideWorldBounds(true);
+        this.arma.setCollideWorldBounds(true);
         
         this.particles = this.add.particles('flares');
 
