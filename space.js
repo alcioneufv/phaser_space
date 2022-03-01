@@ -44,7 +44,8 @@ class Example extends Phaser.Scene
             speedX: { start: 100, end: 400, steps: 12 },
             speedY: { min: -20, max: 20 },
             scale: { start: 0.7, end:  0.2 },
-            blendMode: 'ADD'
+            blendMode: 'ADD',
+            on: false
         });
 
         this.cameras.main.startFollow(this.player, true, 0.05, 0.05);
