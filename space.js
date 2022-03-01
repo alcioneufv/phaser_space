@@ -65,7 +65,7 @@ class Example extends Phaser.Scene
         
         if (this.cursors.space.isDown)
         {
-            this.particles.emitParticleAt(200, 400);
+            this.particles.emitParticleAt(this.player.x, this.player.y);
         }
     
             
