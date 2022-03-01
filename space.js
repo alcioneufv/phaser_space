@@ -39,15 +39,16 @@ class Example extends Phaser.Scene
         this.nave.setCollideWorldBounds(true);
         this.arma.setCollideWorldBounds(true);
         
-        this.particles = this.add.particles('flares');
+        this.particles = this.add.particles('plasma');
 
         this.particles.createEmitter({
-            frame: { frames: [ 'red', 'green', 'blue' ], cycle: true },
+            frame: 0,
             lifespan: 1000,
             speedX: { min: -20, max: 20 },
             speedY: { start: -400, end: -600, steps: 12 },
             scale: { start: 0.7, end:  0.7 },
             blendMode: 'ADD',
+            particleClass: AnimatedParticle,
             on: false
         });
 
